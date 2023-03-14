@@ -113,4 +113,11 @@ resource "aws_nat_gateway" "nat" {
   subnet_id     = aws_subnet.public.id
 }
 
-# Define the S
+# Define the S3 buckets
+resource "aws_s3_bucket" "bucket1" {
+  bucket = "my-bucket-1"
+}
+
+resource "aws_s3_bucket" "bucket2" {
+  bucket = "my-bucket-2"
+}
